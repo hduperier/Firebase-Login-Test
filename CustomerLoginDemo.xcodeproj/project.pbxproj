@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,8 @@
 		B90127CC26A8A8CC009C27C2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90127CB26A8A8CC009C27C2 /* HomeViewController.swift */; };
 		B90127CF26A8B0AC009C27C2 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90127CE26A8B0AC009C27C2 /* Utilities.swift */; };
 		B90127D226A8B503009C27C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B90127D126A8B503009C27C2 /* GoogleService-Info.plist */; };
+		B90127D426A8CF18009C27C2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90127D326A8CF18009C27C2 /* Constants.swift */; };
+		B90127D726A8DA4A009C27C2 /* loginbg.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B90127D626A8DA4A009C27C2 /* loginbg.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		B90127CB26A8A8CC009C27C2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B90127CE26A8B0AC009C27C2 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		B90127D126A8B503009C27C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B90127D326A8CF18009C27C2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B90127D626A8DA4A009C27C2 /* loginbg.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginbg.mp4; sourceTree = "<group>"; };
 		BB95C7048B7DA9977034EF30 /* Pods-CustomerLoginDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomerLoginDemo.release.xcconfig"; path = "Target Support Files/Pods-CustomerLoginDemo/Pods-CustomerLoginDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,7 +62,6 @@
 				481DCF4FC263D7E5B248B900 /* Pods-CustomerLoginDemo.debug.xcconfig */,
 				BB95C7048B7DA9977034EF30 /* Pods-CustomerLoginDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -95,6 +98,7 @@
 				B90127B526A8A800009C27C2 /* SceneDelegate.swift */,
 				B90127D026A8B0BB009C27C2 /* Helpers */,
 				B90127CD26A8A8D1009C27C2 /* View Controllers */,
+				B90127D526A8DA2D009C27C2 /* Media */,
 				B90127B926A8A800009C27C2 /* Main.storyboard */,
 				B90127BC26A8A802009C27C2 /* Assets.xcassets */,
 				B90127BE26A8A802009C27C2 /* LaunchScreen.storyboard */,
@@ -119,8 +123,17 @@
 			isa = PBXGroup;
 			children = (
 				B90127CE26A8B0AC009C27C2 /* Utilities.swift */,
+				B90127D326A8CF18009C27C2 /* Constants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B90127D526A8DA2D009C27C2 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				B90127D626A8DA4A009C27C2 /* loginbg.mp4 */,
+			);
+			path = Media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B90127C026A8A802009C27C2 /* LaunchScreen.storyboard in Resources */,
+				B90127D726A8DA4A009C27C2 /* loginbg.mp4 in Resources */,
 				B90127D226A8B503009C27C2 /* GoogleService-Info.plist in Resources */,
 				B90127BD26A8A802009C27C2 /* Assets.xcassets in Resources */,
 				B90127BB26A8A800009C27C2 /* Main.storyboard in Resources */,
@@ -245,6 +259,7 @@
 				B90127CA26A8A8BC009C27C2 /* LoginViewController.swift in Sources */,
 				B90127B626A8A800009C27C2 /* SceneDelegate.swift in Sources */,
 				B90127CC26A8A8CC009C27C2 /* HomeViewController.swift in Sources */,
+				B90127D426A8CF18009C27C2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

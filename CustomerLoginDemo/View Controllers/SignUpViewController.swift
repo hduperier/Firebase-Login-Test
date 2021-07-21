@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import FirebaseFirestore
 
 class SignUpViewController: UIViewController {
 
@@ -26,6 +27,7 @@ class SignUpViewController: UIViewController {
         
         setUpElements()
     }
+    
     func setUpElements() {
         
         //Hide error label
@@ -75,8 +77,14 @@ class SignUpViewController: UIViewController {
             
         } else {
             
+            //Create cleaned versions of data
+            let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
             //Create the user
-            Auth.auth().createUser(withEmail: "", password: "") { (result, err) in
+            Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 
                 //Check for errors
                 if err != nil {
@@ -87,6 +95,18 @@ class SignUpViewController: UIViewController {
                 else {
                     
                     //User created success -- store in names
+                    let db = Firestore.firestore()
+                    
+                    db.collection("users").addDocument(data: ["firstName":firstName, "lastName":lastName, "uid":result!.user.uid]) { (error) in
+                        
+                        if error != nil {
+                            //Show error
+                            self.showError(message: "User data couldn't work")
+                        }
+                    }
+                    
+                    //Transition to the home screen
+                    self.transitionToHome()
                 }
                 
             }
@@ -98,9 +118,17 @@ class SignUpViewController: UIViewController {
         
     }
     
-    func showError( message:String ) {
+    func showError(  message:String) {
         errorLabel.text = message
         errorLabel.alpha = 1
+    }
+    
+    func transitionToHome() {
+        
+        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+        
+        view.window?.rootViewController = homeViewController
+        view.window?.makeKeyAndVisible()
     }
     
 }
