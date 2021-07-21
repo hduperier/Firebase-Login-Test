@@ -93,6 +93,9 @@
                                             <constraint firstAttribute="height" constant="40" id="3A1-Uv-EEq"/>
                                         </constraints>
                                         <state key="normal" title="Sign Up"/>
+                                        <connections>
+                                            <action selector="signUpTapped:" destination="pZX-0d-nRc" eventType="touchUpInside" id="wbJ-3Q-P6k"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anV-DV-JfM">
                                         <rect key="frame" x="0.0" y="300" width="334" height="20.5"/>
@@ -118,6 +121,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eUX-za-ezm"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="v8t-7P-wrl" id="bDj-qV-FRP"/>
+                        <outlet property="errorLabel" destination="anV-DV-JfM" id="1rf-jx-7G1"/>
+                        <outlet property="firstNameTextField" destination="nxO-KF-LXO" id="7LJ-Kt-AdG"/>
+                        <outlet property="lastNameTextField" destination="Hsu-Pi-lT4" id="L7l-WO-buf"/>
+                        <outlet property="passwordTextField" destination="zQO-4e-FFd" id="sJ3-1J-cUq"/>
+                        <outlet property="signUpButton" destination="flO-rR-aKY" id="RP8-ee-qFU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lBr-Up-WYx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,6 +162,9 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="zwg-bu-1oW"/>
                                         </constraints>
                                         <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="loginTapped:" destination="VG7-D2-da4" eventType="touchUpInside" id="suL-ra-6Xm"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSM-4f-pOa">
                                         <rect key="frame" x="0.0" y="180" width="334" height="20.5"/>
@@ -174,6 +188,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7TB-ji-CFJ"/>
+                    <connections>
+                        <outlet property="errorLabel" destination="bSM-4f-pOa" id="QtZ-GA-naZ"/>
+                        <outlet property="firstNameTextField" destination="ypv-sb-ft7" id="8rK-Ay-wTy"/>
+                        <outlet property="lastNameTextField" destination="U2p-eC-Qac" id="XfV-OI-7qk"/>
+                        <outlet property="loginButton" destination="ueq-L6-rLd" id="Z6H-pf-R0S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F2J-bo-DLl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
